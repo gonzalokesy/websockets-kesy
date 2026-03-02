@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Mouse Redragon",
+    "description": "Mouse inalambrica gamer",
+    "code": "MR56",
+    "price": 120000,
+    "status": true,
+    "stock": 10,
+    "category": "Computación",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Teclado Redragon",
+    "description": "Teclado mecánico gamer",
+    "code": "MR56",
+    "price": 80000,
+    "status": true,
+    "stock": 10,
+    "category": "Computación",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Auriculares Redragon",
+    "description": "Auriculares USB",
+    "code": "MR46",
+    "price": 80000,
+    "status": true,
+    "stock": 10,
+    "category": "Computación",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Pad Redragon",
+    "description": "Base de apoyo",
+    "code": "MR46",
+    "price": 12000,
+    "status": true,
+    "stock": 10,
+    "category": "Computación",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Monitor Samsung",
+    "description": "27'",
+    "code": "Mg96",
+    "price": 500000,
+    "status": true,
+    "stock": 10,
+    "category": "Computación",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  }
+]

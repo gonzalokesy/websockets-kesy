@@ -1,0 +1,19 @@
+<section class="page-section">
+    <h2>Vista dinámica</h2>
+
+    <div id="products-container" class="products-grid">
+        {{#each products}}
+        <article class="product-card">
+            <h3>{{this.title}}</h3>
+            <p class="price">Precio: ${{this.price}}</p>
+            <p class="desc">{{this.description}}</p>
+            <span class="category">{{this.category}}</span>
+        </article>
+        {{else}}
+        <p>No hay productos en el inventario.</p>
+        {{/each}}
+    </div>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/static/js/realTime.js"></script>
