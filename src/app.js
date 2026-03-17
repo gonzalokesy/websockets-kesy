@@ -6,6 +6,7 @@ import viewsRouter from './routes/views.router.js';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import productsRouter from './routes/products.router.js';
+import connectMongoDB from './config/db/connect.config.js';
 
 const app = express();
 
@@ -40,4 +41,10 @@ io.on('connection', (socket) => {
 });
 
 const PORT = 3000;
-httpServer.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
+
+const inicioServer = async () => {
+    await connectMongoDB()
+    httpServer.listen(PORT, () => console.log(`✅ Servidor corriendo en http://localhost:${PORT}`));
+}
+
+inicioServer();
