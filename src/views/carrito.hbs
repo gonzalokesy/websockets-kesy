@@ -1,0 +1,17 @@
+<section class="page-section">
+    <h2>Vista carrito</h2>
+    <p>Estás en el carrito ID: {{this.idCarrito}}</p>
+    <div class="products-grid">
+        {{#each productos}}
+        <article class="product-card">
+            <h3>{{this.producto.title}}</h3>
+            <p class="price">Precio: ${{this.producto.price}}</p>
+            <p class="desc">{{this.producto.description}}</p>
+            <p>Cantidad comprada: {{this.cantidad}}</p>
+            <span class="category">{{this.producto.category}}</span>
+        </article>
+        {{else}}
+        <p>No hay productos en el inventario.</p>
+        {{/each}}
+    </div>
+</section>

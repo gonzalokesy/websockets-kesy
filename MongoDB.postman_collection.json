@@ -1,0 +1,366 @@
+{
+  "info": {
+    "_postman_id": "876de90f-d3b8-4e3b-991d-64d46a00690a",
+    "name": "MongoDB",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17572782",
+    "_collection_link": "https://go.postman.co/collection/17572782-876de90f-d3b8-4e3b-991d-64d46a00690a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CrearProducto",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"SSD Samsung 990 Pro 2TB\",\r\n  \"description\": \"Teclado mecánico gamer con luces led\",\r\n  \"price\": 75000,\r\n  \"status\": true,\r\n  \"stock\": 10,\r\n  \"category\": \"Computacion\",\r\n  \"thumbnails\": []\r\n}\r\n\r\n\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ObtenerProductos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Mouse Redragon\",\r\n  \"description\": \"Mouse inalambrica gamer\",\r\n  \"price\": 120000,\r\n  \"status\": true,\r\n  \"stock\": 10,\r\n  \"category\": \"Computación\",\r\n  \"thumbnails\": [\"img1.jpg\", \"img2.jpg\"]\r\n}\r\n\r\n\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/products?limit=2&sort=asc&query=Teclados",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "products"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "2"
+            },
+            {
+              "key": "sort",
+              "value": "asc"
+            },
+            {
+              "key": "query",
+              "value": "Teclados"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ObtenerProductoPorID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"price\": 890\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/products/69b8d96e66559339c06aaf08",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "products",
+            "69b8d96e66559339c06aaf08"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ModificarProducto",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"price\": 50\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/products/69b8d96e66559339c06aaf08",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "products",
+            "69b8d96e66559339c06aaf08"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EliminarProducto",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Mouse Redragon\",\r\n  \"description\": \"Mouse inalambrica gamer\",\r\n  \"price\": 120000,\r\n  \"status\": true,\r\n  \"stock\": 10,\r\n  \"category\": \"Computación\",\r\n  \"thumbnails\": [\"img1.jpg\", \"img2.jpg\"]\r\n}\r\n\r\n\r\n\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:3000/products/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "products",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CrearCarrito",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Mouse Redragon\",\r\n  \"description\": \"Mouse inalambrica gamer\",\r\n  \"price\": 120000,\r\n  \"status\": true,\r\n  \"stock\": 10,\r\n  \"category\": \"Computación\",\r\n  \"thumbnails\": [\"img1.jpg\", \"img2.jpg\"]\r\n}\r\n\r\n\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ObtenerCarritos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Mouse Redragon\",\r\n  \"description\": \"Mouse inalambrica gamer\",\r\n  \"price\": 120000,\r\n  \"status\": true,\r\n  \"stock\": 10,\r\n  \"category\": \"Computación\",\r\n  \"thumbnails\": [\"img1.jpg\", \"img2.jpg\"]\r\n}\r\n\r\n\r\n\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ObtenerCarritoPorID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Mouse Redragon\",\r\n  \"description\": \"Mouse inalambrica gamer\",\r\n  \"price\": 120000,\r\n  \"status\": true,\r\n  \"stock\": 10,\r\n  \"category\": \"Computación\",\r\n  \"thumbnails\": [\"img1.jpg\", \"img2.jpg\"]\r\n}\r\n\r\n\r\n\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/cart/69b9c6f7904e67d191ceac8e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart",
+            "69b9c6f7904e67d191ceac8e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AgregarProdcuctoAlCarrito",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cart/69b9c6f7904e67d191ceac8e/product/69b8d96e66559339c06aaf0a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart",
+            "69b9c6f7904e67d191ceac8e",
+            "product",
+            "69b8d96e66559339c06aaf0a"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EliminarProductoDelCarrito",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cart/69b9c6f7904e67d191ceac8e/product/69b8d96e66559339c06aaf0c",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart",
+            "69b9c6f7904e67d191ceac8e",
+            "product",
+            "69b8d96e66559339c06aaf0c"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VaciarCarrito",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cart/69b9c6f7904e67d191ceac8e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart",
+            "69b9c6f7904e67d191ceac8e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EliminarCarrito",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/cart/borrar/69b9c71f904e67d191ceac90",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "cart",
+            "borrar",
+            "69b9c71f904e67d191ceac90"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

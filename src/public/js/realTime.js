@@ -10,10 +10,10 @@ socket.on('updateProducts', (products) => {
         article.classList.add('product-card');
 
         article.innerHTML = `
-            <h3>{{this.title}}</h3>
-            <p class="price">Precio: ${this.price}</p>
-            <p class="desc">{{this.description}}</p>
-            <span class="category">{{this.category}}</span>
+            <h3>${prod.title}</h3>
+            <p class="price">Precio: ${prod.price} </p>
+            <p class="desc"> ${prod.description}</p>
+            <span class="category"> ${prod.category}</span>
         `;
 
         container.appendChild(article);

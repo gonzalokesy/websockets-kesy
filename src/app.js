@@ -5,8 +5,9 @@ import { fileURLToPath } from 'url';
 import viewsRouter from './routes/views.router.js';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
-import productsRouter from './routes/products.router.js';
 import connectMongoDB from './config/db/connect.config.js';
+import productsRouter from './routes/products.router.js'
+import carritoRouter from './routes/carrito.router.js'
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 // Middlware de vistas
 app.use('/', viewsRouter);
 app.use('/products', productsRouter);
+app.use('/api/cart', carritoRouter);
 
 // Conexión Websockets
 io.on('connection', (socket) => {

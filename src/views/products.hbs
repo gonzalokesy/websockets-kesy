@@ -1,0 +1,36 @@
+<section class="page-section">
+    <h2>Vista paginada</h2>
+    <div class="products-grid">
+        {{#each productos}}
+        <article class="product-card">
+            <h3>{{this.title}}</h3>
+            <p class="price">Precio: ${{this.price}}</p>
+            <p class="desc">{{this.description}}</p>
+            <span class="category">{{this.category}}</span>
+            <button class="btn-agregar" id="{{this.id}}">Agregar al Carrito</button>
+        </article>
+        {{else}}
+        <p>No hay productos en el inventario.</p>
+        {{/each}}
+    </div>
+</section>
+
+<section class="'paginate-section">
+    <div class="pagination">
+        {{#if hasPrevPage}}
+        <a
+            href="/productsPaginated?page={{prevPage}}&limit={{limit}}{{#if sort}}&sort={{sort}}{{/if}}{{#if query}}&query={{query}}{{/if}}">«
+            Anterior</a>
+        {{/if}}
+
+        <span>Página {{page}} de {{totalPages}}</span>
+
+        {{#if hasNextPage}}
+        <a
+            href="/productsPaginated?page={{nextPage}}&limit={{limit}}{{#if sort}}&sort={{sort}}{{/if}}{{#if query}}&query={{query}}{{/if}}">Siguiente
+            »</a>
+        {{/if}}
+    </div>
+</section>
+
+<script src="../static/js/main.js"></script>
